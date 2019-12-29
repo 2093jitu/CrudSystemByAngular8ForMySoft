@@ -1,0 +1,90 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+	
+		<a href="/search" class="btn btn-primary">Show All Users</a>
+	
+    <div class="row">
+        <div class="col-md-10">
+			<fieldset>
+				<div class="p-3 mb-2 bg-primary text-white"
+				style="text-align: center; margin-bottom: 50px">
+				<h2 style=" padding-top: 15px; padding-bottom: 15px;">
+					<b>SignUp For Create A Donation</b>
+				</h2>
+			</div>
+            <form>
+                <div class="row">
+					<div class="col-md-6">
+						<label for="name">Fast Name</label> <input required="true" type="text"
+							class="form-control" placeholder="Enter Your First Name...." id="name"
+							name="fastName" [(ngModel)]="user.firstName" minlength="5" >
+					</div>
+
+					<div class="col-md-6">
+						<label for="email">Last Name</label> <input type="text" required="true"
+							class="form-control" placeholder="Last Name" id="email"
+							name="lastName" [(ngModel)]="user.lastName"  >
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="contactNumber">Email</label> <input required="true" type="email"
+							class="form-control" placeholder="Enter Email" id="contactNumber"
+							name="email" [(ngModel)]="user.email">
+					</div>
+				</div>			
+
+				<div class="row">
+					<div class="col-md-12">
+						<label for="password">Password</label> <input required="true" type="password"
+							class="form-control" placeholder="Enter Password" id="password"
+							name="password" [(ngModel)]="user.password">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<label for="dob">Date Of Birth</label> <input required="true" type="date"
+							class="form-control" placeholder="Date Of Birth" name="date"
+							id="date" [(ngModel)]="user.dateOfBirth">
+					</div>
+				</div>
+
+				<div class="row" style="margin-top: 20px;">
+
+					<div class="col-md-12">
+						<label for="gender">Gender</label>	
+					
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gender"
+								id="exampleRadios1" value="Male"  [(ngModel)]="user.gender"> <label
+								class="form-check-label" for="exampleRadios1"> Male</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gender"
+								id="exampleRadios2" value="Female"  [(ngModel)]="user.gender"> <label
+								class="form-check-label" for="exampleRadios2"> FeMale</label>
+						</div>
+					</div>				
+				</div>				
+				<div class="row" style="margin-top: 15px">
+					<div class="col-md-12">						
+							<input class="btn btn-block btn-primary" type="submit" name="submit_reg" value="SingUp" (click)="registerNow()">
+					</div>
+				</div>
+			</form>
+		</fieldset>            
+        </div>
+    </div>
+</div>
+
+
